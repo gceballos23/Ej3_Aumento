@@ -1,19 +1,19 @@
 let btnSend = document.getElementById("send");
 
 btnSend.addEventListener("click", () => {
-  let posicionLLegada: number = Number(data1.value);
-  switch (posicionLLegada) {
-    case 1:
-      console.log("Entregar medalla de oro");
-      break;
-    case 2:
-      console.log("Entregar medalla de plata");
-      break;
+  let sueldo: number = Number(data.value);
 
-    case 3:
-      console.log("Entregar Medalla de Bronce");
-      break;
-    default:
-      console.log("NO recibe medalla");
+  if (sueldo < 15001) {
+    console.log("Aumento", sueldo * 0.2);
+  } else {
+    if (sueldo < 20001) {
+      console.log("Aumento", sueldo * 0.1);
+    } else {
+      if (sueldo <= 25000) {
+        console.log("Aumento", sueldo * 0.05);
+      } else {
+        console.log("No hay Aumento");
+      }
+    }
   }
 });
